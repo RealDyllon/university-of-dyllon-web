@@ -1,9 +1,11 @@
 .container {
   padding: 0 2rem;
+  background: #000;
+  color: #fff
 }
 
 .main {
-  min-height: 100vh;
+  min-height: calc(100vh - 5em - 6px);
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -16,9 +18,10 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #333;
   justify-content: center;
   align-items: center;
+  color: #ccc
 }
 
 .footer a {
@@ -42,7 +45,25 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 7rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* background-clip: text; */
+  background-image: url('/orange-silver-render.jpg');
+  /* background-image: url('/waves-white-render.jpg'); */
+  background-position: center;
+  animation: 20s backgroundAnimated infinite linear;
+  color: #ffffff;
+}
+
+@keyframes backgroundAnimated {
+  from {
+    background-position: top;
+  }
+
+  to {
+    background-position: bottom;
+  }
 }
 
 .title,
