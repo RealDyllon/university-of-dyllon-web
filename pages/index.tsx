@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <a href="https://dyllon.io" target="_blank" rel="noopener noreferrer">
-          Made with ❤️ by Dyllon
+          Made with ❤️ by&nbsp;<span> Dyllon</span>
         </a>
       </footer>
     </div>

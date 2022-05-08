@@ -1,11 +1,12 @@
 .container {
   padding: 0 2rem;
   background: #000;
-  color: #fff
+  color: #fff;
 }
 
 .main {
   min-height: calc(100vh - 5em - 6px);
+  min-height: calc(100lvh - 5em - 6px);
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -15,13 +16,14 @@
 }
 
 .footer {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #333;
   justify-content: center;
   align-items: center;
-  color: #ccc
+  color: #999;
 }
 
 .footer a {
@@ -29,6 +31,10 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.footer a span {
+  color: #ffffff;
 }
 
 .title a {
@@ -49,11 +55,17 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   /* background-clip: text; */
-  background-image: url('/orange-silver-render.jpg');
+  background-image: url("/orange-silver-render.jpg");
   /* background-image: url('/waves-white-render.jpg'); */
   background-position: center;
   animation: 20s backgroundAnimated infinite linear;
   color: #ffffff;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 3rem;
+  }
 }
 
 @keyframes backgroundAnimated {
