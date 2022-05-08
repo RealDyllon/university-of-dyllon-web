@@ -6,7 +6,9 @@
 
 .main {
   min-height: calc(100vh - 5em - 6px);
-  min-height: calc(100lvh - 5em - 6px);
+  min-height: calc(
+    100svh - 5em - 6px
+  ); /* take smaller viewport of dynamic browers (safari iOS 15+) */
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -54,11 +56,42 @@
   font-size: 7rem;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  /* background-clip: text; */
-  background-image: url("/orange-silver-render.jpg");
+  background-clip: text;
+
+  background-image: linear-gradient(
+    -45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab
+  );
+  background-size: 100vh 600vh;
+
+  /* background-image: url("/orange-silver-render.jpg"); */
   /* background-image: url('/waves-white-render.jpg'); */
-  background-position: center;
-  animation: 20s backgroundAnimated infinite linear;
+  /* background-position: center; */
+  animation: 40s backgroundAnimated infinite linear;
+  /* animation: 8s textColorChange infinite linear; */
   color: #ffffff;
 }
 
@@ -70,11 +103,29 @@
 
 @keyframes backgroundAnimated {
   from {
-    background-position: top;
+    background-position: 0% 0%;
   }
 
   to {
-    background-position: bottom;
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes textColorChange {
+  0% {
+    color: #f1ddbf;
+  }
+  25% {
+    color: #8fbdd3;
+  }
+  50% {
+    color: #bb6464;
+  }
+  75% {
+    color: #92ba92;
+  }
+  100% {
+    color: #f1ddbf;
   }
 }
 
